@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Support Assistant | Jenneffer Souza</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <!-- CABEÇALHO -->
+        <section class="hero">
+
+            <div class="ai-icon">🤖</div>
+
+            <p class="eyebrow">
+                ARTIFICIAL INTELLIGENCE PROJECT
+            </p>
+
+            <h1>AI Support Assistant</h1>
+
+            <p class="description">
+                Assistente inteligente para análise e classificação
+                automática de solicitações de suporte.
+            </p>
+
+        </section>
+
+
+        <!-- ÁREA DE SOLICITAÇÃO -->
+        <section class="card request-card">
+
+            <div class="card-header">
+                <div>
+                    <span class="label">SUPPORT REQUEST</span>
+                    <h2>Como posso ajudar?</h2>
+                </div>
+
+                <span class="status">
+                    AI Assistant
+                </span>
+            </div>
+
+
+            <form id="supportForm">
+
+                <label for="request">
+                    Descreva sua solicitação
+                </label>
+
+                <textarea
+                    id="request"
+                    name="request"
+                    placeholder="Ex: Não consigo acessar o sistema e preciso enviar um relatório hoje..."
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    ✨ Analisar solicitação
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+        <section class="results">
+
+            <div class="result-card">
+
+                <span class="label">
+                    CATEGORY
+                </span>
+
+                <h3>Categoria</h3>
+
+                <p id="category">
+                    Aguardando análise...
+                </p>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <span class="label">
+                    PRIORITY
+                </span>
+
+                <h3>Prioridade</h3>
+
+                <p id="priority">
+                    Aguardando análise...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESPOSTA SUGERIDA -->
+        <section class="card">
+
+            <div class="card-header">
+
+                <div>
+                    <span class="label">
+                        AI RESPONSE
+                    </span>
+
+                    <h2>
+                        Resposta sugerida
+                    </h2>
+                </div>
+
+                <span class="status">
+                    ✨ IA
+                </span>
+
+            </div>
+
+
+            <div
+                class="response-box"
+                id="response"
+            >
+
+                <p>
+                    A resposta sugerida aparecerá aqui
+                    após a análise da solicitação.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PALAVRAS DETECTADAS -->
+        <section class="card">
+
+            <span class="label">
+                DETECTED KEYWORDS
+            </span>
+
+            <h2>
+                Palavras identificadas
+            </h2>
+
+            <div
+                class="keywords"
+                id="keywords"
+            >
+
+                <span class="keyword">
+                    Aguardando análise
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMO FUNCIONA -->
+        <section class="card">
+
+            <span class="label">
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                Como funciona?
+            </h2>
+
+            <div class="flow">
+
+                <div class="flow-item">
+                    <span>01</span>
+                    <h3>Entrada</h3>
+                    <p>
+                        O usuário descreve sua solicitação.
+                    </p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="flow-item">
+                    <span>02</span>
+                    <h3>Análise</h3>
+                    <p>
+                        O sistema identifica contexto e
+                        palavras relevantes.
+                    </p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="flow-item">
+                    <span>03</span>
+                    <h3>Classificação</h3>
+                    <p>
+                        A solicitação recebe categoria
+                        e prioridade.
+                    </p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="flow-item">
+                    <span>04</span>
+                    <h3>Resposta</h3>
+                    <p>
+                        O assistente gera uma sugestão
+                        de atendimento.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+</body>
+
+</html>
